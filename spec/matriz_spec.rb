@@ -25,4 +25,19 @@ describe Matriz do
     end
   end
 
+    describe " Comprobamos las matrices " do
+    it " Matriz 1: acceso a los elementos en cada posicion " do 
+       @matriz1.matriz[0][0].should eq(1)
+       @matriz1.matriz[0][1].should eq(1)
+       @matriz1.matriz[1][0].should eq(1)
+@matriz1.matriz[1][1].should eq(1)
+    end
+    it " Matriz 2: acceso a los elementos en cada posicion" do
+       @matriz2.matriz[0][0].should eq(1)
+       @matriz2.matriz[0][1].should eq(1)
+       @matriz2.matriz[1][0].should eq(1)
+       @matriz2.matriz[1][1].should eq(1)
+    end
+  end
+
 end
