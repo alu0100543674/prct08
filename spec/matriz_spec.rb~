@@ -40,4 +40,17 @@ describe Matriz do
     end
   end
 
+    describe " Operaciones aritmeticas " do
+     it " Suma de dos matrices " do
+       @resultado = Matriz.new(2,2,[[2, 2],[2,2]])
+       @sum = @matriz1 + @matriz2
+       @sum.to_s.should eq(@resultado.to_s)
+     end
+     it " Resta de dos matrices " do
+       @resultado = Matriz.new(2,2,[[0, 0],[0,0]])
+       @res = @matriz1 - @matriz2
+       @res.to_s.should eq(@resultado.to_s)
+     end
+    end
+
 end

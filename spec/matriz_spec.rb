@@ -46,11 +46,25 @@ describe Matriz do
        @sum = @matriz1 + @matriz2
        @sum.to_s.should eq(@resultado.to_s)
      end
+
      it " Resta de dos matrices " do
        @resultado = Matriz.new(2,2,[[0, 0],[0,0]])
        @res = @matriz1 - @matriz2
        @res.to_s.should eq(@resultado.to_s)
      end
+
+      it " Multiplicacion de dos matrices " do
+       @resultado = Matriz.new(2, 2, [[2, 2], [2, 2]])
+       @mult = @matriz1 * @matriz2
+       @mult.to_s.should eq(@resultado.to_s)
     end
+    
+    it " Traspuesta de una matriz " do
+       @traspuesta = Matriz.new(3, 2, [[1,4], [2, 5], [3, 6]])
+       @matriz3.traspuesta.to_s.should eq(@traspuesta.to_s)
+
+
+    end
+   end
 
 end
