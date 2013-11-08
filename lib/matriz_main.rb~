@@ -15,4 +15,3 @@ puts "Valor: #{matriz2}"
 printf("Suma: #{matrizsum}")
 printf("Resta: #{matrizres}")
 printf("Multiplicacion: #{matrizmul}")
-printf("Traspuesta: #{matriztrasp}")
