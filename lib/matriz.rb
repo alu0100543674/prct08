@@ -87,13 +87,13 @@ def *(other)
 
 end
 
-class Matrizfraccion < Matriz
+class MatrizFraccion < Matriz
  def zero()
    Fraccion.new(0, 1)
  end
 end
 
-class MatrizIteger < Matriz
+class MatrizInteger < Matriz
  def zero()
    0
  end
