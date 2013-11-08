@@ -62,7 +62,7 @@ def *(other)
      for i in 0...filas do
         fil = Array.new(0)
         for j in 0...other.columnas do
-           aux = 0
+           aux = zero()
            for k in 0...columnas do
               aux += matriz[i][k] * other.matriz[k][j]
            end
@@ -86,3 +86,16 @@ def *(other)
    end
 
 end
+
+class Matrizfraccion < Matriz
+ def zero()
+   Fraccion.new(0, 1)
+ end
+end
+
+class MatrizIteger < Matriz
+ def zero()
+   0
+ end
+end
+
