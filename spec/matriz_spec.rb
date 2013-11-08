@@ -14,13 +14,6 @@ describe Matriz do
 
   end
 
-   describe " Almacenamiento " do
-     it "Debe existir un numerador" do
-        @matriz1.filas.should eq(2)
-     end
-     it "Debe existir un denominador" do
-        @matriz1.columnas.should eq(2)
-     end
-  end
+   
 
 end
