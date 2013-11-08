@@ -70,9 +70,10 @@ describe Matriz do
      end
     
      it " Suma de dos matrices fraccionarias " do
-       @resultado = Matriz.new(2, 2, [[@f12, @f12], [@f12, @f12]])
-       @sum1 = @matrizfr1 + @matrizfr2
-       @sum1.to_s.should eq(@resultado.to_s)
+       # @resultado = Matriz.new(2, 2, [[@f12, @f12], [@f12, @f12]])
+       suma = @matrizfr1 + @matrizfr2
+       #@sum1.to_s.should eq(@resultado.to_s)
+       suma.should eq([[@f12, @f12], [@f12, @f12]])
      end
 
      it " Resta de dos matrices " do
