@@ -55,4 +55,34 @@ def filas
     
      Matriz.new(@filas, @columnas, col)
   end
+
+def *(other)
+     raise ArgumentError, 'No se pueden multiplicar' unless @columnas == other.filas
+     col = Array.new(0)
+     for i in 0...filas do
+        fil = Array.new(0)
+        for j in 0...other.columnas do
+           aux = 0
+           for k in 0...columnas do
+              aux += matriz[i][k] * other.matriz[k][j]
+           end
+           fil << aux
+        end
+        col << fil
+      end
+      Matriz.new(@filas, other.columnas, col)
+  end
+ 
+   def traspuesta
+     col = Array.new(0)
+     for i in 0...columnas do
+       fil = Array.new(0)
+       for j in 0...filas do
+         fil << matriz[j][i]
+       end
+       col << fil
+     end
+     Matriz.new(@columnas, @filas, col)
+   end
+
 end

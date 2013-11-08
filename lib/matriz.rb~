@@ -29,4 +29,30 @@ def filas
      aux
    end
 
+ def +(other)
+     raise ArgumentError, 'No se puede sumar' unless @filas == other.filas && @columnas == other.columnas
+     col = Array.new(0)
+     for i in 0...filas do
+       fil = Array.new(0)
+       for j in 0...columnas do
+         fil << matriz[i][j] + other.matriz[i][j]
+       end
+       col << fil
+      end
+      Matriz.new(@filas, @columnas, col)
+   end
+
+   def -(other)
+      raise ArgumentError, 'No se puede restar' unless @filas == other.filas && @columnas == other.columnas
+        col = Array.new(0)
+        for i in 0...filas do
+          fil = Array.new(0)
+          for j in 0...columnas do
+            fil << matriz[i][j] - other.matriz[i][j]
+          end
+          col << fil
+        end
+    
+     Matriz.new(@filas, @columnas, col)
+  end
 end
