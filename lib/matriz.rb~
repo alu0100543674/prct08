@@ -1,0 +1,9 @@
+class Matriz
+  attr_accesor :filas, :columnas, :matriz
+
+  def initialize()
+  
+
+  end
+  
+end
